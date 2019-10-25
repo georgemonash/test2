@@ -1,0 +1,102 @@
+* {
+	/* These will reset the behaviour of padding so your width doesn't get bigger if you add padding */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+html,body{
+	margin:0;
+	padding:0;
+}
+
+.container1{
+	width: 50%;
+	height:400px;
+	margin: 100px 25%;
+	background-color:lightblue;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	flex-direction:column; /*column removes horizontal centering (only centers vertically). need an 'align items' command. 
+	can also centre using % margins to add up to 100 %. Eg for a 50% box can put 2 25% margins to centre.*/
+}
+
+.flex1{
+	width:150px;
+	height:150px;
+	background-color:gray;
+	z-index:5;
+
+}
+
+.flex2{
+	width:200px;
+	height:200px;
+	background-color:yellow;
+	border-radius:50%;
+	/*looks like a circle*/
+
+	margin-top: -50px;
+	/* negative margin makes objects overlap*/
+	}
+
+
+.container2{
+	width:50%;
+	height:400px;
+	background-color:lightblue;
+	margin:0px 25%;
+	position:relative; /*sets 0,0 coordinates to the top left corner of the container rather than the page*/
+
+}
+
+.item1{
+	width:150px;
+	height:150px;
+	background-color:gray;
+	z-index:5;
+	position:absolute;
+	left:50%;
+	margin-left:-75px; /*half of the item's width allows it to be centred*/
+	top:50%;
+	margin-top:-75px; /*can also apply this vertically*/
+
+}
+
+.item2{
+
+	width:200px;
+	height:200px;
+	background-color:yellow;
+	border-radius:50%;
+	position: absolute;
+	top:150px;
+	left:50%;
+	margin-left:-100px;
+
+}
+
+
+.container3{
+
+	background-color:orange;
+	height:100vh; /*vh=100 units of vertical height which refers to the height of the browser*/
+	padding:50px;
+}
+
+.container4{
+
+	height:600px;
+	padding:50px;
+	background-color:limegreen;
+}
+
+.sticky{
+
+	font-family:sans-serif;
+	margin-top:0px;
+	position:sticky; /*cross between absolute, static and fixed*/
+	top:100px;
+}
+
